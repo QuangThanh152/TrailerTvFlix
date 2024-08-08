@@ -1,5 +1,4 @@
 'use strict';
-
 import { api_key, imageBaseURL, fetchDataFromServer } from "./api.js";
 import { sidebar } from "./sidebar.js";
 import { createMovieCard } from "./movie-card.js";
@@ -10,6 +9,7 @@ const pageContent = document.querySelector("[page-content]");
 
 // function
 sidebar();
+
 const getGenres = function(genreList) {
     let newGenreList = [];
     for (const {name} of genreList) {
@@ -161,4 +161,5 @@ const addSuggestedMovies = function ({ results: movieList }, title) {
     pageContent.appendChild(movieListElem);
 };
 
+// call function to search movies
 search();
